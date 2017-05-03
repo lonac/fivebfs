@@ -23,10 +23,11 @@ class CompanyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $companies = Company::all();
-        return view('companies.index', compact('companies'));
+        $comp = Company::whereUserId(Auth::user()->id)->whereId($id)->first();
+        dd($comp);
+       	// return view('companies.index', compact('companies'));
     }
 
     /**
@@ -124,7 +125,7 @@ class CompanyController extends Controller
         $company->user_id = Auth::user()->id;       
         $company->save();
 
-        return redirect('companies/' . $company->id);
+        return redirect('company/' . $company->id);
     }
 
     /**

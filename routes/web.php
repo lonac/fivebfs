@@ -21,4 +21,5 @@ Auth::routes();
 Route::get('/home','HomeController@index');
 
 
-Route::get('companies/create','CompanyController@create');
+Route::get('company/create','CompanyController@create');
+Route::post('company/create','CompanyController@store');
