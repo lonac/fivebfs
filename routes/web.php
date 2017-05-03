@@ -19,3 +19,6 @@ Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->firstname('home');
 Route::get('/home','HomeController@index');
+
+
+Route::get('companies/create','CompanyController@create');
