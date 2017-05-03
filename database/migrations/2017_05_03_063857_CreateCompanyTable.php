@@ -13,7 +13,21 @@ class CreateCompanyTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('companies',function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('line_one');
+            $table->string('line_two')->nullable();
+            $table->string('phone1');
+            $table->string('phone2')->nullable();
+            $table->string('email')->nullable();
+            $table->integer('capital')->default('0');
+            $table->text('description')->nullable();
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +37,6 @@ class CreateCompanyTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('companies');
     }
 }
