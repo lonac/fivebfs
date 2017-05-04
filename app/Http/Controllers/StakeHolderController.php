@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Auth;
 
+use App\StakeHolder;
+
 use App\Company;
 
 class StakeHolderController extends Controller
@@ -50,7 +52,7 @@ class StakeHolderController extends Controller
     {
         $company = Company::findOrFail($id);
 
-        $stake = new StakeHolders;
+        $stake = new StakeHolder;
         $stake->firstname = $request->input('firstname');
         $stake->lastname = $request->input('lastname');
         $stake->position = $request->input('position');

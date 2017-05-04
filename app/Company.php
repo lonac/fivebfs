@@ -35,7 +35,7 @@ class Company extends Model
 
     public function stakeholders()
     {
-        return $this->hasMany('App\StakeHolders');
+        return $this->hasMany('App\StakeHolder');
     }
 
     public function companyfiles()

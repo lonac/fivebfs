@@ -14,7 +14,7 @@
 				</div>
 				<div class="panel-body">
 					
-					<form method="POST" action="{{ url('stakeholders/create') }}">
+					<form method="POST" action="{{ url('company/'.$company->id.'/stakeholders/create') }}">
 
 						{{ csrf_field() }}
 

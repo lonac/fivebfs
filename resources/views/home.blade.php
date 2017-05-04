@@ -50,7 +50,7 @@
                         <h3 class="panel-title">Company's Transactions:</h3>
                     </div>
                     <div class="panel-body">
-                        <a href="/companies/{{ $comp->id }}/transactions/show">View Company Transactions</a>    
+                        <a href="/company/{{ $comp->id }}/transactions/show">View Company Transactions</a>    
                     </div>
                 </div>
             </div>
@@ -62,9 +62,9 @@
                         <h3 class="panel-title">Company's StakeHolders:</h3>
                     </div>
                     <div class="panel-body">
-                        <a href="stakeholders/create">Add StakeHolder?</a>
+                        <a href="/company/{{ $comp->id }}/stakeholders/create">Add StakeHolder?</a>    
                         <strong>OR</strong>
-                        <a href="stakeholders/show">View</a> 
+                        <a href="/company/{{ $comp->id }}/stakeholders/show">View</a> 
                          
                     </div>
                 </div>

@@ -53,6 +53,8 @@ class CompanyController extends Controller
             'description' => 'min:10',
             'phone1'=>'required|max:10',
             'phone2'=>'required|max:10',
+            'line_one'=>'required',
+
         ]);
 
         $company = new Company();
