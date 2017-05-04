@@ -72,27 +72,28 @@
          </div>
             @else
             <div class="row">
-                <div class="panel panel-info">
+                <div class="col-md-3 col-md-offset-1">
+                <div class="panel panel-success">
                     <div class="panel-body">
-                        <div class="col-md-10 col-md-offset-1">
                             <p>
-                            Add more<a href="{{url('company/create')}}">Company</a> details here!
-                         </p>
+                                <a href="{{url('company/create')}}" role="Button" class="btn btn-primary" >Add Company Details</a> 
+                             </p>
                         </div>
                     </div>
                 </div>
             </div>
             
         @endif
-
     @endif
-            <div class="col-md-2 col-md-offset-1">
-                <div class="panel panel-info">
-                    <div class="panel-body">
-                        <a href="#" role="Button" class="btn btn-primary">Apply for Loan</a>    
-                    </div>
+    <div class="row">
+         <div class="col-md-3 col-md-offset-1">
+                <div class="panel panel-success">
+                  <div class="panel-body">
+                         <a href="#" role="Button" class="btn btn-primary">Apply for Loan</a>    
+                 </div>
                 </div>
-            </div>
+        </div>
+    </div>
 
 </div>
 @endsection
