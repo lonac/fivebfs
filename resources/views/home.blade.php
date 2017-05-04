@@ -85,10 +85,14 @@
             
         @endif
 
-
-        @else
-            Welcome and apply for loan
-
     @endif
+            <div class="col-md-2 col-md-offset-1">
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <a href="#" role="Button" class="btn btn-primary">Apply for Loan</a>    
+                    </div>
+                </div>
+            </div>
+
 </div>
 @endsection
