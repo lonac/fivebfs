@@ -6,13 +6,10 @@
 
 <div class="container">
 	<div class="row">
-	
-		<h2>You are applying loan at : {{ $company->name }}</h2>
-
 		<div class="col-sm-6 col-sm-offset-3">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title">Loan Application Form:</h3>
+					<h3 class="panel-title">Loan Application Form: : {{ $company->name }}</h3>
 				</div>
 				<div class="panel-body">
 					

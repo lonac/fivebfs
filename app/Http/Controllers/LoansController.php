@@ -55,6 +55,8 @@ class LoansController extends Controller
         $loan->sponsor = $request->input('sponsor');
     	$loan->save();
 
-    	return redirect('account/my-loans');
+    	//return redirect('account/my-loans');
+
+        return redirect('home');
     }
 }
