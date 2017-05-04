@@ -30,8 +30,9 @@ class HomeController extends Controller
         $user = Auth::user();
         $comp = $user->Company;
         $u = $user->id;
+        $me = Auth::user()->firstname;
     
-        return view('home',compact('comp','u'));
+        return view('home',compact('comp','u','me'));
 
     }
 }
