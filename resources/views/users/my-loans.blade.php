@@ -52,7 +52,7 @@
 		@else
 		<h3>
 			<font color="red">Sorry! No Loans for this account!</font>
-			<a href="{{url('#')}}">Appy Now?</a>
+			<a href="/company/1/loans/apply">Appy Now?</a>
 		</h3>
 
 		@endif
