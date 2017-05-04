@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-@section('title', 'Company Registrations')
+@section('title', 'Company Details')
 
 @section('content')
 
@@ -10,7 +10,7 @@
 		<div class="col-sm-6 col-sm-offset-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Register Your Company</h3>
+					<h3 class="panel-title">Add Company Details:</h3>
 				</div>
 				<div class="panel-body">
 					
@@ -56,7 +56,7 @@
 							<label for="capital">Capital:</label>
 							<input type="number" name="capital" class="form-control" id="capital" placeholder="Capital??">
 						</div>
-						<button type="submit" class="btn btn-success">Create</button>
+						<button type="submit" class="btn btn-success">Save</button>
 					</form>
 
 				</div>
