@@ -89,7 +89,7 @@
          <div class="col-md-3 col-md-offset-1">
                 <div class="panel panel-success">
                   <div class="panel-body">
-                         <a href="#" role="Button" class="btn btn-primary">Apply for Loan</a>    
+                         <a href="loans/apply" role="Button" class="btn btn-primary">Apply for Loan</a>    
                  </div>
                 </div>
         </div>
