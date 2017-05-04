@@ -65,10 +65,13 @@ class CompanyController extends Controller
         $company->capital = $request->input('capital');
         $company->description = $request->input('description');
         $company->user_id = Auth::user()->id;
+        $u= Auth::user()->id;
 
-        $company->save();
-
-        return redirect('/home');
+        //check if the user_is_the one with id=1
+        if($u==1){
+            $company->save();
+                 return redirect('/home');
+        }
     }
 
     /**

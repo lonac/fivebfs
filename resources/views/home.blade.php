@@ -14,7 +14,8 @@
         </div>
     </div>
 
-    
+    @if($u==1)
+           
     {{-- VIEW MY COMPANY --}}
         @if($comp!==null)
         <div class="row">
@@ -75,7 +76,7 @@
                     <div class="panel-body">
                         <div class="col-md-10 col-md-offset-1">
                             <p>
-                            You can Always <a href="{{url('company/create')}}">Register</a> your company here!
+                            Add more<a href="{{url('company/create')}}">Company</a> details here!
                          </p>
                         </div>
                     </div>
@@ -83,5 +84,11 @@
             </div>
             
         @endif
+
+
+        @else
+            Welcome and apply for loan
+
+    @endif
 </div>
 @endsection
