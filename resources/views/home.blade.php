@@ -88,7 +88,8 @@
                         <div class="panel panel-success">
                           <div class="panel-body">
                             <p>
-                                <a href="http://localhost:8000/company/1/loans/apply">Apply Loan</a>
+                                <a href="company/1/loans/apply" role="button" class="btn btn-primary">Apply Loan</a>
+                                <a href="account/my-loans" role="button" class="btn btn-success">view My Loans</a>
                            </p>    
                          </div>
                         </div>

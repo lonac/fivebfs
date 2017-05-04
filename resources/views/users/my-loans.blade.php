@@ -9,7 +9,6 @@
 
 	<div class="well">
 		<h2>My Loans:</h2>
-
 		@if($loans->count() > 0)
 
 			<table class="table table-hover">
@@ -53,7 +52,7 @@
 		@else
 		<h3>
 			<font color="red">Sorry! No Loans for this account!</font>
-			<a href="{{url('companies')}}">Appy Now?</a>
+			<a href="{{url('#')}}">Appy Now?</a>
 		</h3>
 
 		@endif
