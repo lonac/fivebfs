@@ -24,7 +24,7 @@
                         <h3 class="panel-title">Company:</h3>
                     </div>
                     <div class="panel-body">
-                        <h4><a href="company/{{ $comp->id }}">{{ $comp->name }}</a></h4>
+                        <h4><a href="company/{{ $comp->id }}/show">{{ $comp->name }}</a></h4>
                     </div>
                 </div>
             </div>

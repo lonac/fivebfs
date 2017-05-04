@@ -22,6 +22,11 @@ Route::get('/home','HomeController@index');
 
 Route::get('company/create','CompanyController@create');
 Route::post('company/create','CompanyController@store');
+Route::get('company/{id}/show','CompanyController@show');
+Route::get('company/{id}/edit','CompanyController@edit');
+Route::get('company/{id}/edit','CompanyController@update');
+
+
 
 Route::get('company/{id}/loans/apply','LoansController@create');
 Route::post('company/{id}/loans/apply','LoansController@store');
