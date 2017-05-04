@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Company;
 
+use Auth;
+
+use App\Transaction;
+
 class TransactionController extends Controller
 {
     public function __construct()
