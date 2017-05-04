@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+
+use App\Company;
+
 class StakeHolderController extends Controller
 {
     /**
@@ -28,7 +32,12 @@ class StakeHolderController extends Controller
        //$stak = $company->stake_holders;
       // dd($stak);
 
-       return view('stakeholders.create',compact('company'));
+       if($user->id==1){
+
+       		 return view('stakeholders.create',compact('company'));
+       }
+
+      
     }
 
     /**

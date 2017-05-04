@@ -24,3 +24,6 @@ Route::get('company/create','CompanyController@create');
 Route::post('company/create','CompanyController@store');
 
 Route::get('loans/apply','LoansController@create');
+
+
+Route::get('stakeholders/create','StakeHolderController@create');
