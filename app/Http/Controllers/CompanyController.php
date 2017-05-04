@@ -151,7 +151,7 @@ class CompanyController extends Controller
         
         $company->delete();
 
-        return redirect('companies');
+        return redirect('company');
     }
 
     public function search()
@@ -159,6 +159,6 @@ class CompanyController extends Controller
          $comp = DB::table('companies')
                 ->where('name', 'like', 'searchcompany')
                 ->get();
-                return view('companies.search',compact('comp'));
+                return view('company.search',compact('comp'));
     }
 }

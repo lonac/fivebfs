@@ -23,8 +23,10 @@ Route::get('/home','HomeController@index');
 Route::get('company/create','CompanyController@create');
 Route::post('company/create','CompanyController@store');
 
-Route::get('loans/apply','LoansController@create');
-
+Route::get('company/{id}/loans/apply','LoansController@create');
+Route::post('company/{id}/loans/apply','LoansController@store');
+Route::get('company/{id}/loans/show','LoansController@index');
+Route::get('account/my-loans', 'UserController@myLoans');
 
 Route::get('company/{id}/stakeholders/create','StakeHolderController@create');
 Route::post('company/{id}/stakeholders/create','StakeHolderController@store');

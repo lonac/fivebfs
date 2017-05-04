@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Company;
 
+use App\Loan;
+
+use Auth;
+
 class LoansController extends Controller
 {
    public function __construct()
@@ -20,24 +24,24 @@ class LoansController extends Controller
     	return view('loans.show', compact('loans'));
     }
 
-    public function create()
+    public function create($id)
     {
-    	$company = Company::first();
+    	$company = Company::findOrFail($id);
 
-      //  $stakeholder = $company->stakeholders;
+         $stakeholder = $company->stakeholders;
       //  dd($name);
-    		return view('loans.apply', compact('company'));
+    		return view('loans.apply', compact('company','stakeholder'));
     }
 
     public function store(Request $request, $id)
     {
     	
-       /* $this->validate($request, [
+        $this->validate($request, [
 
-       'terms' => 'required',
+       'reason' => 'required|string|max:200',
     ]);
 
-        */
+        
 
         $company = Company::findOrFail($id);
     	// TODO Validate amount
@@ -55,8 +59,6 @@ class LoansController extends Controller
         $loan->sponsor = $request->input('sponsor');
     	$loan->save();
 
-    	//return redirect('account/my-loans');
-
-        return redirect('home');
+    	   return redirect('account/my-loans');
     }
 }

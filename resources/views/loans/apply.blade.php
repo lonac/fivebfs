@@ -13,7 +13,7 @@
 				</div>
 				<div class="panel-body">
 					
-					<form method="POST" action="{{ url('loans/apply') }}" >
+					<form method="POST" action="{{ url('company/'.$company->id.'/loans/apply') }}" >
 
 						{{ csrf_field() }}
 
@@ -38,18 +38,18 @@
 							<textarea name="reason" id="reason" class="form-control" rows="10" placeholder="Write something why you are applying"></textarea>
 						</div>
 
-				{{--		@if($stakeholder->count()>0)
+						@if($stakeholder->count()>0)
 							<div class="form-group">
 								<label for="sponsor">Choose Sponsor</label>
 								<select class="form-control" name="sponsor">
 									@foreach ($stakeholder as $stake)
-										<option value="{{$stake->firstname}}{{ $stake->lastname}}">{{$stake->firstname}}  {{$stake->laststname}}</option>
+										<option value="{{$stake->firstname}}{{ $stake->lastname}}">{{$stake->firstname}}  {{$stake->lastname}}</option>
 									@endforeach
 
 								</select>
 							</div>
 						@endif 
-				--}}
+				
 						<div class="form-group">
 								<label for="paymeans">Means of Payment:</label>
 									<select class="form-control" name="paymeans">
