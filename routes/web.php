@@ -27,3 +27,4 @@ Route::get('loans/apply','LoansController@create');
 
 
 Route::get('stakeholders/create','StakeHolderController@create');
+Route::post('stakeholders/create','StakeHolderController@store');
