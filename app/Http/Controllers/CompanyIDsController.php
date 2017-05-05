@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Auth:
+
+use App\Company;
+
 use Illuminate\Http\Request;
 
-class CompanyIDs extends Controller
+class CompanyIDsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +25,11 @@ class CompanyIDs extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+           $company = Company::findOrFail($id);
+
+           return view('companyIDs.create',compact('company'));
     }
 
     /**

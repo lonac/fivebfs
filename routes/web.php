@@ -40,3 +40,5 @@ Route::get('company/{id}/stakeholders/show','StakeHolderController@show');
 Route::get('company/{id}/transactions/create','TransactionController@create');
 Route::post('company/{id}/transactions/create','TransactionController@store');
 Route::get('company/{id}/transactions/show','TransactionController@show');
+
+Route::get('company/{id}/companyIDs/create','CompanyIDsController@create');

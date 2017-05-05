@@ -20,6 +20,11 @@
 					<button type="submit" class="btn btn-danger">Delete Company</button>
 				</form>
 
+				<div class="form-group">
+					<a href="">Generate Company IDs</a>
+
+				</div>
+
 			@endif		
 		@endif
 	</div>
