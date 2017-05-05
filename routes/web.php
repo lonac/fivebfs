@@ -42,3 +42,4 @@ Route::post('company/{id}/transactions/create','TransactionController@store');
 Route::get('company/{id}/transactions/show','TransactionController@show');
 
 Route::get('company/{id}/companyIDs/create','CompanyIDsController@create');
+Route::post('company/{id}/companyIDs/create','CompanyIDsController@store');

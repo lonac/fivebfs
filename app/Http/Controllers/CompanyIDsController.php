@@ -6,6 +6,8 @@ use Auth;
 
 use App\Company;
 
+use App\CompanyIDs;
+
 use Illuminate\Http\Request;
 
 class CompanyIDsController extends Controller
@@ -38,10 +40,18 @@ class CompanyIDsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
+
+        $company = Company::findOrFail($id);
+
         $staffID = new companyIDs;
-        
+        $staffID->staff_id = $request->input('staff_id');
+        $staffID->company_id = $company->id;
+
+        $staffID->save();
+
+        return view('home');
     }
 
     /**
