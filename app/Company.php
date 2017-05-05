@@ -42,4 +42,9 @@ class Company extends Model
     {
         return $this->hasOne('App\CompanyFile');
     }
+
+    public function roles()
+    {
+        return $this->hasMany('App\RoleStaff');
+    }
 }
