@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Auth:
+use Auth;
 
 use App\Company;
 
@@ -40,7 +40,8 @@ class CompanyIDsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $staffID = new companyIDs;
+        
     }
 
     /**

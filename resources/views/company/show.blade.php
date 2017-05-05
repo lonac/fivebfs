@@ -21,8 +21,7 @@
 				</form>
 
 				<div class="form-group">
-					<a href="">Generate Company IDs</a>
-
+					<a href="{{ url('company/'.$company->id.'/companyIDs/create') }}">Generate Company IDs</a>
 				</div>
 
 			@endif		

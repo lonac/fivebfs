@@ -7,7 +7,7 @@
 <div class="container">
 	<div class="row">
 
-		<div class="col-sm-6 col-sm-offset-3">
+		<div class="col-sm-4 col-sm-offset-3">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title">Generate Staff IDs at {{ $company->name }} </h3>
@@ -20,7 +20,8 @@
 
 						<div class="form-group">
 							<label for="staffId">Staff Id</label>
-							<input type="text" name="staff_id" id="staff_id" class="form-control" placeholder="New Staff ID" />
+							<input type="text" name="staff_id" id="staff_id" class="form-control" placeholder="e.g (5bfs-0001)" />
+						</div>
 						<button type="submit" class="btn btn-success">ADD</button>
 					</form>
 
