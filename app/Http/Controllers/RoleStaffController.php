@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RoleStaffTable extends Controller
+class RoleStaffController extends Controller
 {
     /**
      * Display a listing of the resource.
