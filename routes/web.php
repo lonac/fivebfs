@@ -24,7 +24,7 @@ Route::get('company/create','CompanyController@create');
 Route::post('company/create','CompanyController@store');
 Route::get('company/{id}/show','CompanyController@show');
 Route::get('company/{id}/edit','CompanyController@edit');
-Route::get('company/{id}/edit','CompanyController@update');
+Route::post('company/{id}/edit','CompanyController@update');
 
 
 

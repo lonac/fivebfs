@@ -116,7 +116,7 @@ class CompanyController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255',
             'description' => 'min:10',
-        ]);
+        ]); 
 
         $company = Company::whereUserId(Auth::user()->id)->whereId($id)->first();
         $company = new Company();
@@ -130,7 +130,7 @@ class CompanyController extends Controller
         $company->user_id = Auth::user()->id;       
         $company->save();
 
-        return redirect('company/' . $company->id);
+        return redirect('home');
     }
 
     /**
@@ -151,7 +151,7 @@ class CompanyController extends Controller
         
         $company->delete();
 
-        return redirect('company');
+        return redirect('home');
     }
 
     public function search()

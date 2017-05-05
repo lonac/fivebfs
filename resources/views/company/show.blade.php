@@ -6,18 +6,18 @@
 
 <div class="jumbotron">
 	<div class="container text-center">
-
 		<h3>{{ $company->name }}</h3>
 		@if( ! Auth::guest())
 			@if($company->ceo->id === Auth::user()->id)
-				<a href="{{ url('company/' . $company->id . '/edit') }}">Edit</a>
-
+			<div class="form-group">
+				<a href="{{ url('company/' . $company->id . '/edit') }}" class="btn btn-primary" role="button">Edit Company</a>
+			</div>
 				{{-- TODO Add confirmation dialog --}}
 				<form method="POST" action="{{ url('company/' . $company->id) }}"  onclick="return confirm('You are about to delete Company?');">
 					{{ method_field('delete') }}
 
 					{{ csrf_field() }}
-					<button type="submit" class="btn btn-danger">Delete</button>
+					<button type="submit" class="btn btn-danger">Delete Company</button>
 				</form>
 
 			@endif		

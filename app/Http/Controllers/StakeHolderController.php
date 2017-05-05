@@ -60,7 +60,10 @@ class StakeHolderController extends Controller
         $stake->company_id = $company->id; 
         $stake->save();
 
-        return redirect('/home');
+        $company = Company::findOrFail($id);
+        $stakeholder = $company->stakeholders;
+
+        return view('stakeholders.show',compact('company','stakeholder'));
     }
 
     /**
