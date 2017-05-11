@@ -12,15 +12,7 @@
 					<h3 class="panel-title">SList of Company IDs : {{ $company->name }} </h3>
 				</div>
 				<div class="panel-body">
-					@if($staffIDs->count()>0)
-
-						@include('staffId.table');
-
-					@else
-
-						No stakeholders!
-
-					@endif
+					
 					
 				</div>
 			</div>

@@ -48,8 +48,8 @@ class Company extends Model
         return $this->hasMany('App\RoleStaff');
     }
 
-    public function companyIDs()
+    public function companyids()
     {
-        return $this->hasMany('App\CompanyIDs');
+        return $this->hasMany('App\Companyids');
     }
 }

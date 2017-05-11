@@ -6,7 +6,7 @@ use Auth;
 
 use App\Company;
 
-use App\CompanyIDs;
+use App\Companyids;
 
 use Illuminate\Http\Request;
 
@@ -45,13 +45,13 @@ class CompanyIDsController extends Controller
 
         $company = Company::findOrFail($id);
 
-        $staffID = new companyIDs;
+        $staffID = new Companyids;
         $staffID->staff_id = $request->input('staff_id');
         $staffID->company_id = $company->id;
 
         $staffID->save();
 
-        return view('home');
+        return redirect('/home');
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CompanyIDs extends Model
+class Companyids extends Model
 {
     protected $fillable = [
 

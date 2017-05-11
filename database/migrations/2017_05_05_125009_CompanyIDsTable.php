@@ -13,7 +13,14 @@ class CompanyIDsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('companyids',function (Blueprint $table){
+
+            $table->increments('id');
+            $table->integer('company_id')->unsigned()->index();
+            $table->foreign('company_id')->references('id')->on('companies')->onUpdate('cascade');
+            $table->string('staff_id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class CompanyIDsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('companyids');
     }
 }
